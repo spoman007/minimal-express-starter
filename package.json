@@ -1,0 +1,22 @@
+{
+  "name": "minimal-express-starter",
+  "version": "1.0.0",
+  "bin": {
+    "minimal-express-starter": "index.js"
+  },
+  "description": "Minimal Express Starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spoman007/minimal-express-starter.git"
+  },
+  "author": "Sandeep Poman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spoman007/minimal-express-starter/issues"
+  },
+  "homepage": "https://github.com/spoman007/minimal-express-starter#readme"
+}
