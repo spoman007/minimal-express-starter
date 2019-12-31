@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/spoman007/minimal-express-starter/issues"
   },
-  "homepage": "https://github.com/spoman007/minimal-express-starter#readme"
+  "homepage": "https://github.com/spoman007/minimal-express-starter#readme",
+  "dependencies": {
+    "rimraf": "^3.0.0"
+  }
 }

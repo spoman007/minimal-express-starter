@@ -1,8 +1,8 @@
 #! /usr/bin/env node
-
+rmdir = require('rimraf');
 const { spawn } = require('child_process');
 
-const name = process.argv[2];
+const name = process.argv[2] || "sample";
 if (!name || name.match(/[<>:"\/\\|?*\x00-\x1F]/)) {
   return console.log(`
   Invalid directory name.
@@ -14,18 +14,14 @@ const repoURL = 'https://github.com/spoman007/node-starter.git';
 
 runCommand('git', ['clone', repoURL, name])
   .then(() => {
-    return runCommand('rm', ['-rf', `${name}/.git`]);
+    rmdir(`${name}/.git`, function (error) { });
   }).then(() => {
     console.log('Installing dependencies...');
-    return runCommand('npm', ['install'], {
+    return runCommand('npm.cmd', ['install'], {
       cwd: process.cwd() + '/' + name
     });
   }).then(() => {
-    console.log('Done! 🏁');
-    console.log('');
-    console.log('To get started:');
-    console.log('cd', name);
-    console.log('npm run dev');
+    console.log(`Done, get in ${name} directory and do a npm start 🔥🔥🔥`);
   });
 
 function runCommand(command, args, options = undefined) {
@@ -35,11 +31,11 @@ function runCommand(command, args, options = undefined) {
     spawned.stdout.on('data', (data) => {
       console.log(data.toString());
     });
-    
+
     spawned.stderr.on('data', (data) => {
       console.error(data.toString());
     });
-    
+
     spawned.on('close', () => {
       resolve();
     });
