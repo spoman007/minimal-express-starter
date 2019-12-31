@@ -1,6 +1,6 @@
 {
   "name": "minimal-express-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bin": {
     "minimal-express-starter": "index.js"
   },
