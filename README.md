@@ -7,7 +7,7 @@
 3. .env using dotenv
 4. Express server running with REST routes and CORS added
 
-### To try it run `npx minimal-express-starter [name of directory]` 
+### To try it run `npx minimal-express-starter my-express-app` 
 
 ## And thats it 😄😄😄
 
