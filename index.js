@@ -17,7 +17,7 @@ runCommand('git', ['clone', repoURL, name])
     rmdir(`${name}/.git`, function (error) { });
   }).then(() => {
     console.log('Installing dependencies...');
-    return runCommand('npm.cmd', ['install'], {
+    return runCommand(/^win/.test(process.platform) ? 'npm.cmd' : 'npm', ['install'], {
       cwd: process.cwd() + '/' + name
     });
   }).then(() => {
