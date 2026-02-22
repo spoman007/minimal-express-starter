@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/spoman007/minimal-express-starter#readme",
   "dependencies": {
-    "rimraf": "^3.0.0"
+    "rimraf": "^6.1.3"
   }
 }
